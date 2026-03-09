@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  @apply antialiased;
+}
+
+/* Base link styles */
+a {
+  @apply transition-colors duration-200;
+}
+
+/* Image object fit utilities commonly used in eCommerce */
+img {
+  @apply object-cover;
+}
