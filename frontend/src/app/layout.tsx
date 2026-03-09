@@ -19,12 +19,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${montserrat.variable} antialiased bg-white text-neutral-900 min-h-screen flex flex-col`}>
+      <body className={`${inter.className} ${montserrat.variable} antialiased bg-white text-neutral-900 min-h-screen md:min-h-[1874px] flex flex-col relative max-w-[1920px] mx-auto`}>
         <Header />
-        <main className="flex-1">
+        <main className="flex-1 w-full relative">
           {children}
         </main>
-        <Footer />
+        {/* On desktop, absolute positioning enforces the exact 1632px Y-coordinate from the top frame edge */}
+        <div className="w-full md:absolute md:top-[1632px]">
+          <Footer />
+        </div>
       </body>
     </html>
   );

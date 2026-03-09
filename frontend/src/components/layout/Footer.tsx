@@ -3,9 +3,12 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-white pt-[84px] pb-[19px] border-t border-[#F5F5F5] shrink-0">
-      <div className="w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-[160px] relative">
-        <div className="flex flex-col md:flex-row justify-between items-start mb-0">
+    <footer className="bg-white shrink-0 border-[#F5F5F5] pt-[40px] md:pt-[44px] pb-[19px] md:h-[224px] flex flex-col justify-between">
+      {/* Absolute top border that enforces the Figma structure without messing up internal text padding */}
+      <div className="absolute top-0 left-0 w-full h-[1px] bg-[#F5F5F5]"></div>
+      
+      <div className="w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-[160px] relative h-full flex flex-col justify-between">
+        <div className="flex flex-col md:flex-row justify-between items-start mb-0 md:mb-0">
           
           {/* Columns Container */}
           <div className="flex flex-col md:flex-row gap-8 lg:gap-[60px] w-full md:w-auto">
@@ -70,9 +73,9 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="text-center pt-[40px] border-t border-[#F5F5F5]">
+        <div className="text-center md:absolute w-full left-0 md:top-[204px] pt-[19px] pb-[19px] mt-auto md:p-0 border-t border-[#F5F5F5] md:border-t-0">
           <p 
-            className="text-[11px] font-light tracking-[0.1em] text-black uppercase"
+            className="text-[11px] font-light tracking-[0.1em] text-black uppercase leading-none"
             style={{ fontFamily: 'var(--font-montserrat), Montserrat, sans-serif' }}
           >
             © 2026 ESTER WUGMAN

@@ -9,7 +9,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="pt-0 pb-[36px] max-w-[1920px] mx-auto">
+    <div className="pt-0 pb-[36px] max-w-[1920px] mx-auto w-full">
       {/* Hero Section */}
       <section className="mb-24 px-4 md:px-12 lg:px-[160px] w-full">
         <div className="grid grid-cols-1 md:grid-cols-[552fr_515fr_533fr] w-full aspect-auto md:aspect-[1600/640] overflow-hidden">
